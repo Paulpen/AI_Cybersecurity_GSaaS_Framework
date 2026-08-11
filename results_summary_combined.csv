@@ -1,0 +1,17 @@
+Metric,NSL-KDD,UNSW-NB15,Notes
+Training samples (normal),"67,343","56,000",Normal traffic used for autoencoder training
+Test samples,"22,544","82,332",Full test set
+Feature dimension d,41,42,Input feature count
+Anomaly threshold τ,0.005797,0.000939,95th percentile of clean training errors
+Detection Accuracy (%),78.77,72.87,Proposed framework — anomaly detection
+False Positive Rate (%),7.88,8.85,Proposed framework — key Africa metric
+True Positive Rate (%),68.67,57.95,Attack detection rate
+Weighted F1 (anomaly detection),0.7876,0.7240,Proposed framework
+Classification Accuracy (%),75.43,84.37,MLP threat classifier on detected anomalies
+Weighted F1 (classification),0.7742,0.8139,MLP threat classifier
+Generic Baseline A FPR (%),40.19,66.99,"Shallow AE, 50th pct τ — no calibration"
+Standard Baseline B FPR (%),21.59,35.74,"Standard AE, 75th pct τ — no calibration"
+FPR Reduction vs Baseline A (%),80.4,86.8,Core novelty result — Africa calibration advantage
+Average Resilience Index ℛ̄,0.8970,0.8970,Scenario-based — dataset independent
+Edge Latency T_e (ms),12.4,12.4,Estimated — constrained edge hardware
+Cloud Latency T_c (ms),38.7,38.7,Estimated — includes Africa uplink delay

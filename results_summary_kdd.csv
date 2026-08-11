@@ -1,0 +1,48 @@
+Metric,Value,Notes
+ANOMALY DETECTION,,
+Metric,Value,Notes
+Training samples (normal only),"67,343",Used for autoencoder training — unsupervised
+Test samples,"22,544",Full test set (normal + attacks)
+Feature dimension d,41,Number of input features after preprocessing
+Anomaly threshold τ (95th pct),0.005797,95th percentile of clean training reconstruction errors
+Detection Accuracy (%),78.77,Percentage of samples correctly classified as normal/attack
+False Positive Rate (%),7.88,Normal traffic incorrectly flagged as attack
+True Positive Rate / Detection Rate (%),68.67,Attacks correctly detected
+True Positives (TP),"8,813",Attacks correctly detected
+False Positives (FP),765,Normal samples wrongly flagged
+True Negatives (TN),"8,946",Normal samples correctly passed
+False Negatives (FN),"4,020",Attacks missed by the detector
+Weighted F1-Score (anomaly detection),0.7876,Harmonic mean of precision and recall
+,,
+THREAT CLASSIFICATION,,
+Metric,Value,Notes
+Classification Accuracy (%),75.43,Accuracy on detected anomalies only
+Weighted F1-Score (classification),0.7742,Weighted by class support
+Classification Latency (ms/sample),0.0661,Time per sample through MLP classifier
+,,
+SYSTEM PERFORMANCE,,
+Metric,Value,Notes
+Edge Processing Latency T_e (ms),12.4,Lightweight model on constrained edge hardware
+Cloud Processing Latency T_c (ms),38.7,Includes Africa uplink delay estimate
+Effective Detection Latency T_total (ms),12.4,"min(T_e, T_c) per Equation (10)"
+,,
+COMPOSITE RISK SCORING,,
+Metric,Value,Notes
+Alpha (α) — Anomaly score weight,0.5,Highest weight — autonomous prioritisation in low-staff environments
+Beta (β) — System criticality weight,0.3,Ground station command infrastructure criticality
+Gamma (γ) — Contextual factor weight,0.2,"Africa-specific: bandwidth constraints, regulatory fragmentation"
+Normalisation constraint,α + β + γ = 1.0,"Ensures R is a bounded weighted average in [0,1]"
+,,
+RESILIENCE INDEX,,
+Metric,Value,Notes
+Minimum resilience threshold ρ,0.85,Minimum acceptable operational capability under attack
+Average Resilience Index ℛ̄,0.8970,Average across all five attack types
+Attack types meeting threshold,4 of 5,DDoS falls below threshold — bandwidth saturation in Africa
+,,
+FPR REDUCTION VS BASELINES,,
+Metric,Value,Notes
+Generic Baseline A FPR (%),40.19,"Shallow AE, τ at 50th percentile — no Africa calibration"
+Standard Baseline B FPR (%),21.59,"Standard AE, τ at 75th percentile — no Africa calibration"
+Proposed Framework FPR (%),7.88,"Africa-calibrated, τ at 95th percentile"
+FPR Reduction vs Baseline A (%),80.4,Percentage reduction in false alarm rate
+FPR Reduction vs Baseline B (%),63.5,Percentage reduction in false alarm rate

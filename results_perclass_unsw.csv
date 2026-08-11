@@ -1,0 +1,8 @@
+threat_class,precision,recall,f1_score,support,dataset
+Command_Injection,0.8813,0.9875,0.9314,22760,UNSW-NB15
+Cross_Tenant_Intrusion,0.0,0.0,0.0,292,UNSW-NB15
+DDoS,0.661,0.0238,0.0459,1642,UNSW-NB15
+Insider_Threat,0.0,0.0,0.0,9,UNSW-NB15
+Normal,0.892,0.5546,0.684,3276,UNSW-NB15
+RF_Spoofing_Jamming,0.307,0.3811,0.3401,1569,UNSW-NB15
+weighted avg,0.8308,0.8437,0.8139,29548,UNSW-NB15

@@ -1,0 +1,6 @@
+attack_type,U_attack,resilience_index,meets_threshold
+DDoS,82.0,0.82,False
+Command_Injection,91.0,0.91,True
+Cross_Tenant_Intrusion,93.5,0.935,True
+RF_Spoofing_Jamming,88.0,0.88,True
+Insider_Threat,94.0,0.94,True

@@ -1,0 +1,4 @@
+label,accuracy,fpr,tpr,f1,tp,fp,tn,fn,tau,tau_pct,latency_ms,encoder_dims
+"Baseline A: Generic (shallow, τ=50th pct)",80.44,40.19,96.05,0.7951,12326,3903,5808,507,0.000309,50,0.049063,[16]
+Baseline B: Standard AE (τ=75th pct),85.61,21.59,91.07,0.855,11687,2097,7614,1146,0.000329,75,0.045156,"[32, 16]"
+"Proposed: GSaaS Framework (τ=95th pct, Africa-calibrated)",78.77,7.88,68.67,0.7876,8813,765,8946,4020,0.005797,95,0.043534,"[32, 16]"
