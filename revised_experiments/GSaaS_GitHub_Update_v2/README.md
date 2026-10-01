@@ -1,6 +1,6 @@
 # GSaaS AI-Driven Cybersecurity Framework — Reproducibility Release v2
 
-This archive accompanies the revised manuscript **“An AI-Driven Cybersecurity Framework for GSaaS: A Case Study of Africa.”** It adds the GSaaS-specific synthetic dataset, trained models, revised experimental code, event-level outputs, and AC-FAB/benchmark artefacts used in the revised evaluation.
+This archive accompanies the revised manuscript **“An AI-Driven Cybersecurity Framework for GSaaS: Threat Detection in Emerging Space Ecosystems.”** It adds the GSaaS-specific synthetic dataset, trained models, revised experimental code, event-level outputs, and AC-FAB/benchmark artefacts used in the revised evaluation.
 
 ## Important scope statement
 
